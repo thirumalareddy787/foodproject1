@@ -42,7 +42,7 @@ restaurantForm.addEventListener("submit", (event) => {
         rating: Number(document.getElementById("rating").value)
     };
 
-    fetch("http://localhost:5000/restaurants", {
+    fetch("https://foodproject1-uvv4.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
