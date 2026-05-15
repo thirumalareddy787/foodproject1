@@ -22,7 +22,7 @@ function renderRestaurants(data) {
 }
 
 function loadRestaurants() {
-    fetch("http://localhost:5000/restaurants")
+    fetch("https://foodproject1-uvv4.onrender.com/restaurants")
         .then((response) => response.json())
         .then(renderRestaurants)
         .catch((err) => {
@@ -42,7 +42,7 @@ restaurantForm.addEventListener("submit", (event) => {
         rating: Number(document.getElementById("rating").value)
     };
 
-    fetch("https://foodproject1-uvv4.onrender.com", {
+    fetch("https://foodproject1-uvv4.onrender.com/restaurants", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
