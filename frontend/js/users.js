@@ -22,7 +22,7 @@ function renderUsers(data) {
 }
 
 function loadUsers() {
-    fetch("http://localhost:5000/users")
+    fetch("https://foodproject1-uvv4.onrender.com")
         .then((response) => response.json())
         .then(renderUsers)
         .catch((err) => {
@@ -42,7 +42,7 @@ userForm.addEventListener("submit", (event) => {
         pincode: document.getElementById("pincode").value.trim()
     };
 
-    fetch("http://localhost:5000/users", {
+    fetch("https://foodproject1-uvv4.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
