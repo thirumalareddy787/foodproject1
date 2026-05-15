@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <h1>Place an Order</h1>
+
+    <form id="orderForm">
+        <div>
+            <label for="menuItem">Menu Item</label>
+            <select id="menuItem" required></select>
+        </div>
+
+        <div>
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" min="1" value="1" required>
+        </div>
+
+        <div>
+            <label for="street">Street</label>
+            <input type="text" id="street" placeholder="Street address" required>
+        </div>
+
+        <div>
+            <label for="city">City</label>
+            <input type="text" id="city" placeholder="City" required>
+        </div>
+
+        <div>
+            <label for="pincode">Pincode</label>
+            <input type="text" id="pincode" placeholder="Pincode" required>
+        </div>
+
+        <p>Total: ₹<span id="totalAmount">0</span></p>
+        <button type="submit">Place Order</button>
+        <div id="orderMessage"></div>
+    </form>
+
+    <h2>Existing Orders</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Status</th>
+                <th>Total Amount</th>
+                <th>Street</th>
+                <th>City</th>
+                <th>Pincode</th>
+                <th>Order Date</th>
+            </tr>
+        </thead>
+
+        <tbody id="orderData"></tbody>
+    </table>
+
+    <script src="./js/orders.js"></script>
+
+</body>
+</html>

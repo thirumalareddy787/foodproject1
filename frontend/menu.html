@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <h1>Create Menu Item</h1>
+
+    <form id="menuForm" action="#" method="post" onsubmit="return false;">
+        <div>
+            <label for="item_name">Item Name</label>
+            <input type="text" id="item_name" required>
+        </div>
+        <div>
+            <label for="price">Price</label>
+            <input type="number" id="price" min="0" step="0.01" required>
+        </div>
+        <div>
+            <label for="category">Category</label>
+            <input type="text" id="category" required>
+        </div>
+        <div>
+            <label for="restaurant_id">Restaurant ID</label>
+            <input type="number" id="restaurant_id" min="1" required>
+        </div>
+        <button type="submit">Add Menu Item</button>
+        <div id="menuMessage"></div>
+    </form>
+
+    <h1>Menu Data</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Item ID</th>
+                <th>Item Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Restaurant ID</th>
+            </tr>
+        </thead>
+
+        <tbody id="menuData"></tbody>
+    </table>
+
+    <script src="./js/menu.js"></script>
+
+</body>
+</html>
