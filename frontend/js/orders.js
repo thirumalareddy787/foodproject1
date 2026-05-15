@@ -38,7 +38,7 @@ function loadOrders() {
 }
 
 function loadMenu() {
-    fetch("https://foodproject1-uvv4.onrender.com/orders")
+    fetch("https://foodproject1-uvv4.onrender.com/menu")
         .then((response) => response.json())
         .then((data) => {
             menuItems = data;
