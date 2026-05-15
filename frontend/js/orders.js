@@ -28,7 +28,7 @@ function renderOrders(data) {
 }
 
 function loadOrders() {
-    fetch("http://localhost:5000/orders")
+    fetch("https://foodproject1-uvv4.onrender.com")
         .then((response) => response.json())
         .then(renderOrders)
         .catch((err) => {
@@ -38,7 +38,7 @@ function loadOrders() {
 }
 
 function loadMenu() {
-    fetch("http://localhost:5000/menu")
+    fetch("https://foodproject1-uvv4.onrender.com")
         .then((response) => response.json())
         .then((data) => {
             menuItems = data;
@@ -80,7 +80,7 @@ orderForm.addEventListener("submit", (event) => {
 
     const totalAmount = selectedItem.PRICE * quantity;
 
-    fetch("http://localhost:5000/orders", {
+    fetch("https://foodproject1-uvv4.onrender.com", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
